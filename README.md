@@ -63,7 +63,7 @@ Possible Improvements
 =====================
 * make light vary random for realism
 * leave a mark on the wall
-  * multimaterialobejct
+  * multimaterialobject
   * each object for a texture in a empty canvas
   * draw in this canvas and update the texture
 * laser with pointing leap 

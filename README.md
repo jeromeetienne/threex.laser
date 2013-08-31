@@ -25,6 +25,23 @@ It shows a usage of threex.laserbeam.js, it could be the basis for a light sword
 It shows a usage of threex.lasercooked.js. The laser is inside a cube, the cube is
 filled with toruses positioned at random, and the laser is colliding with other objects.
 
+How To Install It
+=================
+
+You can install it via script tag
+
+```html
+<script src='threex.laserbeam.js'></script>
+<script src='threex.lasercooked.js'></script>
+```
+
+Or you can install with [bower](http://bower.io/), as you wish.
+
+```bash
+bower install threex.laser
+```
+
+
 
 How To Use It
 =============

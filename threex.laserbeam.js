@@ -2,6 +2,7 @@ var THREEx = THREEx || {}
 
 THREEx.LaserBeam	= function(){
 	var object3d	= new THREE.Object3D()
+	this.object3d	= object3d
 	// generate the texture
 	var canvas	= generateLaserBodyCanvas()
 	var texture	= new THREE.Texture( canvas )
@@ -23,7 +24,7 @@ THREEx.LaserBeam	= function(){
 		mesh.rotation.x	= i/nPlanes * Math.PI
 		object3d.add(mesh)
 	}
-	return object3d
+	return
 	
 	function generateLaserBodyCanvas(){
 		// init canvas

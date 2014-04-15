@@ -15,10 +15,11 @@
 	//		add an object and make it move					//
 	//////////////////////////////////////////////////////////////////////////////////	
 	var laserBeam	= new THREEx.LaserBeam()
-	scene.add(laserBeam)
+	scene.add(laserBeam.object3d)
 	onRenderFcts.push(function(delta, now){
-		laserBeam.rotation.x += 1 * delta;
-		laserBeam.rotation.y += 0.01;		
+		var object3d	= laserBeam.object3d
+		object3d.rotation.x	+= 1 * delta;
+		object3d.rotation.y	+= 0.01 * delta;		
 	})
 	
 	//////////////////////////////////////////////////////////////////////////////////

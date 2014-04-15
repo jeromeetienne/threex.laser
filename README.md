@@ -5,11 +5,9 @@ It is a
 [threex](http://jeromeetienne.github.io/threex/) extension 
 for 
 [three.js](http://threejs.org)
-which provide a laser like display.
-You can do a simple laser beam which display the laser as transparent and additive blending.
-Or you can get something more cooked.
-```THREEx.LaserCooked``` provides dynamic collision, cool impact effect with point light and
-impact sprites.
+which provide It provide a simple laser beam 
+display with generated texture and additive blending.
+For cooler impact effects, there is dynamic collision, point light and impact sprites.
 
 
 Show Don't Tell
@@ -24,6 +22,10 @@ It shows a usage of threex.laserbeam.js, it could be the basis for a light sword
 \[[view source](https://github.com/jeromeetienne/threex.laser/blob/master/examples/lasercooked.html)\] :
 It shows a usage of threex.lasercooked.js. The laser is inside a cube, the cube is
 filled with toruses positioned at random, and the laser is colliding with other objects.
+
+A Screenshot
+============
+[![screenshot](https://raw.githubusercontent.com/jeromeetienne/threex.laser/master/examples/images/screenshot-threex-laser-512x512.jpg)](http://jeromeetienne.github.io/threex.laser/examples/demo.html)
 
 How To Install It
 =================
@@ -75,9 +77,13 @@ onRenderFcts.push(function(delta, now){
 })
 ```
 
-
 Possible Improvements
 =====================
+* change in API
+  * laserBeam is an actual class which export .object3d
+  * .setSource(vector3)
+  * .setTarget(vector3)
+* rename laser cooked in THREEx.CollidingLaser
 * make light vary random for realism
 * leave a mark on the wall
   * multimaterialobject

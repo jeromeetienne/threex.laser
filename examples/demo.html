@@ -44,14 +44,15 @@
 	for(var i = 0; i < nLasers; i++){
 		(function(){
 			var laserBeam	= new THREEx.LaserBeam()
-			scene.add(laserBeam)
+			scene.add(laserBeam.object3d)
 			var laserCooked	= new THREEx.LaserCooked(laserBeam)
 			onRenderFcts.push(function(delta, now){
 				laserCooked.update(delta, now)
 			})	
-			laserBeam.position.x	= (i-nLasers/2)/2			
-			laserBeam.position.y	= 4
-			laserBeam.rotation.z	= -Math.PI/2			
+			var object3d		= laserBeam.object3d
+			object3d.position.x	= (i-nLasers/2)/2			
+			object3d.position.y	= 4
+			object3d.rotation.z	= -Math.PI/2			
 		})()
 	}
 
@@ -85,7 +86,7 @@
 		var object3d	= new THREE.Mesh( geometry, material )
 		object3d.scale.set(1,1,1).multiplyScalar(5)
 		scene.add(object3d)
-		
+
 		onRenderFcts.push(function(delta, now){
 			var angle	= 0.1*Math.PI*2*now
 			angle	= Math.cos(angle)*Math.PI/15 + 3*Math.PI/2

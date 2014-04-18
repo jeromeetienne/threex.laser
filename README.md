@@ -1,10 +1,10 @@
 threex.laser
 ============
 
-threex.laser is a [threex](http://www.threejsgames.com/extensions/) game extension for three.js. It provides a laser beam effect. Excelent to add in your game about space!
+threex.laser is a [threex](http://www.threejsgames.com/extensions/) game extension for three.js. It provides a laser beam effect. Excellent to add in your space game!
 The laser itself is fully procedural with generated texture.
 The bleeding effect is obtained with additive blending.
-threex.laser contains a more elaborate laser which dynamically collide with your scene. It is all done for you and it looks great! On impact, there is a point light and an particle sprite for cooler effects :)
+threex.laser contains a more elaborate laser which dynamically collides with your scene. It is all done for you and it looks great! On impact, there is a point light and an particle sprite for cooler effects :)
 
 Show Don't Tell
 ===============

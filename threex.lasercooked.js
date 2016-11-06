@@ -39,6 +39,7 @@ THREEx.LaserCooked	= function(laserBeam){
 	var raycaster	= new THREE.Raycaster()
 	// TODO assume object3d.position are worldPosition. works IFF attached to scene
 	raycaster.ray.origin.copy(object3d.position)
+
 	updateFcts.push(function(delta, now){
 		// get laserBeam matrixWorld
 		object3d.updateMatrixWorld();
@@ -55,7 +56,7 @@ THREEx.LaserCooked	= function(laserBeam){
 		var intersects		= raycaster.intersectObjects( scene.children );
 		if( intersects.length > 0 ){
 			var position	= intersects[0].point
-			var distance	= position.distanceTo(object3d.position)
+			var distance	= position.distanceTo(raycaster.ray.origin)
 			object3d.scale.x	= distance
 		}else{
 			object3d.scale.x	= 10			

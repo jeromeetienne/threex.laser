@@ -22,7 +22,6 @@ THREEx.LaserCooked	= function(laserBeam){
 	sprite.scale.x = 0.5
 	sprite.scale.y = 2;
 
-	// sprite.scale.set(1, 1, 1).multiplyScalar(2)
 	sprite.position.x	= 1-0.01
 	object3d.add(sprite)
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<script src='vendor/three.js/build/three.min.js'></script>
+<script src='vendor/three.js/build/three.js'></script>
 <script src='../threex.laserbeam.js'></script>
 <script src='../threex.lasercooked.js'></script>
 <body style='margin: 0px; background-color: #bbbbbb; overflow: hidden;'><script>
@@ -51,8 +51,8 @@
 		var object3d	= laserBeam0.object3d
 		// object3d.rotation.z	= Math.PI/8
 
-		// object3d.rotation.z += 0.4 * delta;
-		// object3d.rotation.y += 1 * delta;		
+		object3d.rotation.z += 0.4 * delta;
+		object3d.rotation.y += 1 * delta;		
 	})
 
 	var laserBeam2	= new THREEx.LaserBeam()

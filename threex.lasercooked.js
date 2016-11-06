@@ -13,14 +13,13 @@ THREEx.LaserCooked	= function(laserBeam){
 
 	// build THREE.Sprite for impact
 	var textureUrl	= THREEx.LaserCooked.baseURL+'images/blue_particle.jpg';
-	var texture	= THREE.ImageUtils.loadTexture(textureUrl)	
+	var texture	= new THREE.TextureLoader().load(textureUrl)	
 	var material	= new THREE.SpriteMaterial({
 		map			: texture,
 		blending		: THREE.AdditiveBlending,
-		useScreenCoordinates	: false,
 	})
 	var sprite	= new THREE.Sprite(material)
-	sprite.scale.set(1, 1, 1).multiplyScalar(2)
+	// sprite.scale.set(1, 1, 1).multiplyScalar(2)
 	sprite.position.x	= 1
 	object3d.add(sprite)
 
@@ -43,7 +42,7 @@ THREEx.LaserCooked	= function(laserBeam){
 		object3d.updateMatrixWorld();
 		var matrixWorld	= object3d.matrixWorld.clone()
 		// set the origin
-		raycaster.ray.origin.getPositionFromMatrix(matrixWorld)
+		raycaster.ray.origin.setFromMatrixPosition(matrixWorld)
 		// keep only the roation
 		matrixWorld.setPosition(new THREE.Vector3(0,0,0))		
 		// set the direction

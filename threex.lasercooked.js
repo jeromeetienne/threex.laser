@@ -3,9 +3,9 @@ var THREEx = THREEx || {}
 THREEx.LaserCooked	= function(laserBeam){
 	// for update loop
 	var updateFcts	= []
-	this.update	= function(delta, now){
+	this.update	= function(){
 		updateFcts.forEach(function(updateFct){
-			updateFct(delta, now)	
+			updateFct()	
 		})
 	}
 	
@@ -40,7 +40,7 @@ THREEx.LaserCooked	= function(laserBeam){
 	// TODO assume object3d.position are worldPosition. works IFF attached to scene
 	raycaster.ray.origin.copy(object3d.position)
 
-	updateFcts.push(function(delta, now){
+	updateFcts.push(function(){
 		// get laserBeam matrixWorld
 		object3d.updateMatrixWorld();
 		var matrixWorld	= object3d.matrixWorld.clone()

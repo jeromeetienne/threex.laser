@@ -15,17 +15,20 @@ THREEx.LaserCooked	= function(laserBeam){
 	var textureUrl	= THREEx.LaserCooked.baseURL+'images/blue_particle.jpg';
 	var texture	= new THREE.TextureLoader().load(textureUrl)	
 	var material	= new THREE.SpriteMaterial({
-		map			: texture,
-		blending		: THREE.AdditiveBlending,
+		map		: texture,
+		blending	: THREE.AdditiveBlending,
 	})
 	var sprite	= new THREE.Sprite(material)
+	sprite.scale.x = 0.5
+	sprite.scale.y = 2;
+
 	// sprite.scale.set(1, 1, 1).multiplyScalar(2)
-	sprite.position.x	= 1
+	sprite.position.x	= 1-0.01
 	object3d.add(sprite)
 
 	// add a point light
-	var light	= new THREE.PointLight( 0x4444ff, 10 );
-	light.intensity	= 2
+	var light	= new THREE.PointLight( 0x4444ff);
+	light.intensity	= 0.5
 	light.distance	= 4
 	light.position.x= -0.05
 	this.light	= light

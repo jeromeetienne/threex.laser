@@ -53,6 +53,13 @@ var laserBeam	= new THREEx.LaserBeam()
 scene.add(laserBeam)
 ```
 
+The constructor takes an optional argument, "color", which can be used to specify the beam color:
+
+```javascript
+var laserBeam	= new THREEx.LaserBeam({r: 255, g: 0, b: 0})
+scene.add(laserBeam)
+```
+
 ## threex.lasercooked.js
 It is a laser beam with dynamic collision. 
 On impacts, to increase realism, there is sprite and point light.

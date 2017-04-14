@@ -43,7 +43,7 @@
 	var nLasers	= 14
 	for(var i = 0; i < nLasers; i++){
 		(function(){
-			var laserBeam	= new THREEx.LaserBeam()
+			var laserBeam	= new THREEx.LaserBeam({r: Math.random()*255, g: Math.random()*255, b: Math.random()*255})
 			scene.add(laserBeam.object3d)
 			var laserCooked	= new THREEx.LaserCooked(laserBeam)
 			onRenderFcts.push(function(delta, now){
